@@ -1,0 +1,237 @@
+/* Geral*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: #333;
+}
+
+body{
+    background-color: #294157;
+    background-position: center;
+    background-size: cover;
+ }
+
+button{
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding:  .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #102f5e;
+    margin-right: .5rem;
+}
+button:hover{
+    background-color: #102f5e;
+}
+button:hover > i{
+    color: #fff;
+    font-weight: bold;
+    pointer-events: none;
+}
+#cancel-edit-btn:hover{
+    background-color: #102f5e;
+    color: #fff;
+}
+input, select{
+    padding: 0.25rem 0.5rem;
+}
+.hide{
+    display: none;
+}
+
+/*cabeçalho a fazer*/
+
+.todo-container{
+    max-width: 450px;
+    margin: 3rem auto ;
+    background-color: #f1f3f6;
+    padding: 1.5rem;
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+.todo-container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #5a5555;
+}
+#todo-form ,
+#edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #5a5555;
+}
+#todo-form p,
+#edit-form p{
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+.form-control{
+    display: flex;
+}
+.form-control input{
+    margin-right: 0.3rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #102f5e;
+}
+#cancel-edit-btn{
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+/*barra de ferramentas*/
+
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #5a5555;
+    display: flex;
+}
+#toolbar h4{
+    margin-bottom: .5rem;
+    
+}
+#search{
+    border-right: 1px solid #5a5555;
+    padding: .15rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    
+}
+#search form{
+    display: flex;
+}
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #102f5e;
+    
+}
+#filter-select{
+    margin-top: 0.7rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #102f5e;
+}
+
+/* lista de tarefas*/
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #102f5e;
+    transition: 3s;
+}
+.todo h3{
+    flex:1;
+    font-size: 0.9rem;
+}
+.todo button{
+    margin-left: 0.4rem;
+}
+
+.done{
+    background-color: #54729e;
+   
+}
+.done h3{
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic ;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .todo-container {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    button {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #toolbar {
+        flex-direction: column;
+    }
+    
+    #search {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #5a5555;
+        margin-right: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .form-control {
+        flex-direction: column;
+    }
+    
+    .form-control input {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+    .form-control button {
+        background-color: #5a759e;
+    
+    }
+    
+    .form-control button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .todo {
+        flex-wrap: wrap;
+    }
+    
+    .todo h3 {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .todo-actions {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .todo-container {
+        width: 95%;
+        padding: 0.75rem;
+    }
+    
+    #todo-form, #edit-form, #toolbar {
+        padding: 0.75rem;
+    }
+    
+    button {
+        padding: 0.15rem 0.3rem;
+        font-size: 0.8rem;
+    }
+}
