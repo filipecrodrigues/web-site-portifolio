@@ -248,15 +248,15 @@ section h2::after {
     background-color: #61dafbab; /* Azul claro para React.js */
 }
 
-.skill-tailwind {
+.skill-postgresql {
     background-color: #38b2acab; /* Verde azulado para Tailwind */
 }
 
-.skill-ts {
-    background-color: #3178c6ab; /* Azul escuro para TypeScript */
+.skill-java {
+    background-color: #d2d8dfab; /* Azul escuro para TypeScript */
 }
 
-.skill-node {
+.skill-spring {
     background-color: #8cc84bab; /* Verde para Node.js */
 }
 
